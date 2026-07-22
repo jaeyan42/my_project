@@ -20,3 +20,13 @@ jobs:
       # 1. github에 저장되어 있는 최신내용을 체크아웃 (소스를 모두 내려받음)
       - name: 코드 checkout
         uses: actions/checkout@v3
+
+      # 환경변수 (생략)
+      # 확인 or 단위 테스트(생략)
+      - name: 확인 검증
+        # 여러 명령어는 |  <- 사용함
+        run:  |
+          pwd
+          ls -al
+          cat main.py
+        shell: bash

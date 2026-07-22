@@ -7,7 +7,7 @@ uvicorn main:app --reload
 ```
 
 # 구조
-
+```text
 my_project/
 ├── static/           <-- 정적 데이터
 │   ├── assets/
@@ -16,6 +16,7 @@ my_project/
 │   │   └── *.css
 │   └── js/
 │       └── *.js
-├── templates/          <-- html 위치
+├── templates/         <-- html 위치
 │   └── index.html
 └── main.py
+```
