@@ -1,0 +1,22 @@
+name: push 기반 CI/CD 테스트
+
+# 트리거 지정, CI/CD가 작동하게 되는 원인, 이벤트등 정의
+# main 브랜치에서 push 이벤트(리슨 -> on)가 발생되면 아래 설정한 내용 작동한다
+
+on:
+  push:
+    branches:
+      - main
+
+# 개별작업(jobs)을 순서대로 나열 (파이프라인)
+jobs:
+  # ci 라는 작업을 하나 설정
+  ci:
+    # 어떤 OS에서 작업을 진행할것인가? -> github에서 클라우드 방식으로 제공 (내부적)
+    runs-on: ubuntu-latest
+
+    # 작업단계 지정
+    steps:
+      # 1. github에 저장되어 있는 최신내용을 체크아웃 (소스를 모두 내려받음)
+      - name: 코드 checkout
+        uses: actions/checkout@v3
