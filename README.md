@@ -16,6 +16,6 @@ my_project/
 │   │   └── *.css
 │   └── js/
 │       └── *.js
-├── templates/         <-- html 위치
+├── templates/          <-- html 위치
 │   └── index.html
 └── main.py
