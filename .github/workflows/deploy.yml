@@ -47,3 +47,15 @@ jobs:
           source: .
           # ubuntu os가 세팅된 ec2 서버의 /home/ubuntu/projects/*.* 복사
           target: "/home/ubuntu/projects"
+        
+      - name: run Script And Service restart
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.EC2_KEY }}
+          port: 22
+          scripts: |
+            #cd /home/ubuntu/projects
+            #./web/bin/pip install -r requirements.txt
+            sudo systemctl restart hello.service
