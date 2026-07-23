@@ -60,6 +60,7 @@ jobs:
           key: ${{ secrets.EC2_KEY }}
           port: 22
           script: |
-            #cd /home/ubuntu/projects
+
+            # cd /home/ubuntu/projects
             #./web/bin/pip install -r requirements.txt
             sudo systemctl start hello.service
