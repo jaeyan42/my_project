@@ -9,14 +9,17 @@ uvicorn main:app --reload
 # 구조
 ```text
 my_project/
-├── static/           <-- 정적 데이터
-│   ├── assets/
-│   │   └── *.jpg|png
-│   ├── css/
-│   │   └── *.css
-│   └── js/
-│       └── *.js
-├── templates/         <-- html 위치
-│   └── index.html
-└── main.py
+│
+├── main.py
+│
+├── templates/ <-- html 위치
+│      └── index.html
+│
+└── static/    <-- 정적 데이터
+       ├── css/
+       │     └── *.css
+       ├── js/
+       │     └── *.js
+       └── img/
+             └── *.jpg|png
 ```
