@@ -19,5 +19,5 @@ def home(req:Request):
     return templates.TemplateResponse(req, "index.html")
 
 @app.get("/auth/login")
-def home(req:Request):
+def login(req:Request):
     return templates.TemplateResponse(req, "login.html")
